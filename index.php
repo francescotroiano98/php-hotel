@@ -1,5 +1,5 @@
 <?php
-
+    
     $hotels = [
 
         [
@@ -68,18 +68,29 @@
     
   </thead>
   <tbody>
+  <?php $hotelindex = 1;  ?>
   
     <tr>
     <?php foreach ($hotels as $singleHotel) { ?>
-      <th scope="row">1</th>
+        
+      <th scope="row"><?php echo $hotelindex ?></th>
+
       <td><?php echo $singleHotel['name'] . ' '; ?></td>
+
       <td><?php echo $singleHotel['description'] . ' '; ?></td>
+
       <td><?php echo $singleHotel['parking'] ? 'true' : 'false';  ?></td>
+
       <td><?php echo $singleHotel['vote']; ?></td>
+
       <td><?php echo $singleHotel['distance_to_center']; ?></td>
+
+      <?php $hotelindex++; ?>
+      
     </tr>
+    
     <?php } ?>
-   
+    
   </tbody>
   
 </table>
